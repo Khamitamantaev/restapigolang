@@ -61,7 +61,7 @@ func (c *Controller) GetToken(w http.ResponseWriter, req *http.Request) {
 		"password": user.Password,
 	})
 
-	log.Println("Username: " + user.Username);
+	log.Println("GUID: " + string(user.Username));
 	log.Println("Password: " + user.Password);
 
 	tokenString, error := token.SignedString([]byte("secret"))
